@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
 import logo from '../../assets/logo.svg';
 import restaurante from '../../assets/restaurante-fake.png';
 
-import { Card } from '../../components';
-import { Wrapper, Container, Search, Logo, Map, CarouselTitle } from './styles';
+import { Card, RestaurantCard } from '../../components/index';
+import { Wrapper, Container, Search, Logo, Map, CarouselTitle, Carousel } from './styles';
 
 
 const Home = () => {
@@ -39,16 +39,18 @@ const Home = () => {
             <CarouselTitle>
               Na sua Área
             </CarouselTitle>
-            <Slider {...settings}>
-              <Card photo={restaurante} />
-              <Card photo={restaurante} />
-              <Card photo={restaurante} />
-              <Card photo={restaurante} />
-              <Card photo={restaurante} />
-              <Card photo={restaurante} />
-              <Card photo={restaurante} />
-            </Slider>
+            <Carousel {...settings}>
+              <Card photo={restaurante} title="Nome do restaurante" />
+              <Card photo={restaurante} title="Nome do restaurante" />
+              <Card photo={restaurante} title="Nome do restaurante" />
+              <Card photo={restaurante} title="Nome do restaurante" />
+              <Card photo={restaurante} title="Nome do restaurante" />
+              <Card photo={restaurante} title="Nome do restaurante" />
+              <Card photo={restaurante} title="Nome do restaurante" />
+              <Card photo={restaurante} title="Nome do restaurante" />
+            </Carousel>
         </Search>
+        <RestaurantCard/>
       </Container>
       <Map/>
     </Wrapper>
